@@ -1,0 +1,110 @@
+body {
+    background: url("../assets/images/background.jpg") no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    section.form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+
+            border-radius: 50%;
+            background: var(--background-image);
+
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            label {
+                display:flex;
+                align-items: center;
+                justify-items: center;
+                height: 100%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    margin-left: 11.5px;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &#email::before {
+                    background: url('../assets/ico/email.svg');
+                }
+
+                &#password::before {
+                    background: url('../assets/ico/lock.svg');
+                }
+            }
+
+            input {
+                border: none;
+                border-radius: 20px;
+                outline: none;
+                padding: 10px 37.5px;
+                background: var(--background-input);
+
+                color: white;
+
+                width: 300px;
+                height: 40px;
+                margin: 5px 0;
+
+                &::placeholder {
+                    color: var(--placeholder);
+                }
+            }
+
+            button {
+                width: 300px;
+                height: 40px;
+
+                margin-top: 5px;
+
+                border: none;
+                border-radius: 20px;
+                outline: none; 
+
+                background: var(--background-button);
+                cursor: pointer;
+
+                color: white;
+
+                transition: 0.7s;
+
+                &:hover {
+                    background: var(--background-button-hover);
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--link);
+
+            font-weight: 300;
+            letter-spacing: 0.1rem;
+
+            margin-top: 15px;
+
+            transition: 0.3s;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
